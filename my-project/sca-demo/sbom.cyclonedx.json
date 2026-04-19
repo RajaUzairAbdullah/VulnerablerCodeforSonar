@@ -1,0 +1,252 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:demo-sca-class-2024-vulnerable-app",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-01-15T10:00:00Z",
+    "tools": [{ "vendor": "Demo", "name": "manual-sbom", "version": "1.0" }],
+    "component": {
+      "type": "application",
+      "name": "insecure-webapp-sca-demo",
+      "version": "1.0.0",
+      "purl": "pkg:npm/insecure-webapp-sca-demo@1.0.0"
+    }
+  },
+  "components": [
+
+    {
+      "type": "library", "group": "", "name": "lodash", "version": "4.17.4",
+      "purl": "pkg:npm/lodash@4.17.4",
+      "description": "CVE-2019-10744 CRITICAL: Prototype Pollution via defaultsDeep/merge/mergeWith/setWith/set"
+    },
+    {
+      "type": "library", "name": "node-serialize", "version": "0.0.4",
+      "purl": "pkg:npm/node-serialize@0.0.4",
+      "description": "CVE-2017-5941 CRITICAL: Remote Code Execution via deserialization of untrusted input"
+    },
+    {
+      "type": "library", "name": "ejs", "version": "3.1.6",
+      "purl": "pkg:npm/ejs@3.1.6",
+      "description": "CVE-2022-29078 CRITICAL: RCE via unsanitized outputFunctionName option"
+    },
+    {
+      "type": "library", "name": "express-fileupload", "version": "1.1.6",
+      "purl": "pkg:npm/express-fileupload@1.1.6",
+      "description": "CVE-2020-7699 CRITICAL: Prototype Pollution via parseNested option leading to RCE"
+    },
+    {
+      "type": "library", "name": "vm2", "version": "3.9.11",
+      "purl": "pkg:npm/vm2@3.9.11",
+      "description": "CVE-2023-29017 CRITICAL: Sandbox escape allowing RCE on host — CVSS 10.0"
+    },
+    {
+      "type": "library", "name": "handlebars", "version": "4.7.6",
+      "purl": "pkg:npm/handlebars@4.7.6",
+      "description": "CVE-2021-23369 CRITICAL: RCE via prototype pollution in compiled templates"
+    },
+    {
+      "type": "library", "name": "minimist", "version": "1.2.0",
+      "purl": "pkg:npm/minimist@1.2.0",
+      "description": "CVE-2021-44906 CRITICAL: Prototype Pollution — all versions before 1.2.6"
+    },
+    {
+      "type": "library", "name": "json-schema", "version": "0.2.3",
+      "purl": "pkg:npm/json-schema@0.2.3",
+      "description": "CVE-2021-3918 CRITICAL: Prototype Pollution in json-schema package"
+    },
+    {
+      "type": "library", "name": "flat", "version": "5.0.0",
+      "purl": "pkg:npm/flat@5.0.0",
+      "description": "CVE-2020-36632 CRITICAL: Prototype Pollution via flatten/unflatten"
+    },
+    {
+      "type": "library", "name": "immer", "version": "8.0.1",
+      "purl": "pkg:npm/immer@8.0.1",
+      "description": "CVE-2021-23436 CRITICAL: Prototype Pollution via produce() with user-controlled data"
+    },
+
+    {
+      "type": "library", "name": "axios", "version": "0.21.1",
+      "purl": "pkg:npm/axios@0.21.1",
+      "description": "CVE-2021-3749 HIGH: SSRF via Authorization header leak on cross-origin redirect"
+    },
+    {
+      "type": "library", "name": "moment", "version": "2.29.1",
+      "purl": "pkg:npm/moment@2.29.1",
+      "description": "CVE-2022-24785 HIGH: Path Traversal via locale loading — allows reading arbitrary files"
+    },
+    {
+      "type": "library", "name": "tar", "version": "4.4.13",
+      "purl": "pkg:npm/tar@4.4.13",
+      "description": "CVE-2021-37701 HIGH: Arbitrary File Creation via Zip Slip in tar extraction"
+    },
+    {
+      "type": "library", "name": "serialize-javascript", "version": "2.1.1",
+      "purl": "pkg:npm/serialize-javascript@2.1.1",
+      "description": "CVE-2019-16769 HIGH: XSS via unsafe serialization of special characters"
+    },
+    {
+      "type": "library", "name": "underscore", "version": "1.12.0",
+      "purl": "pkg:npm/underscore@1.12.0",
+      "description": "CVE-2021-23358 HIGH: Arbitrary Code Execution via template function"
+    },
+    {
+      "type": "library", "name": "y18n", "version": "4.0.0",
+      "purl": "pkg:npm/y18n@4.0.0",
+      "description": "CVE-2020-7774 HIGH: Prototype Pollution in i18n string handling"
+    },
+    {
+      "type": "library", "name": "hosted-git-info", "version": "2.8.8",
+      "purl": "pkg:npm/hosted-git-info@2.8.8",
+      "description": "CVE-2021-23362 HIGH: ReDoS via crafted repository URL in fromUrl()"
+    },
+    {
+      "type": "library", "name": "ssri", "version": "6.0.1",
+      "purl": "pkg:npm/ssri@6.0.1",
+      "description": "CVE-2021-27290 HIGH: ReDoS via crafted SRI string causing CPU exhaustion"
+    },
+    {
+      "type": "library", "name": "path-parse", "version": "1.0.6",
+      "purl": "pkg:npm/path-parse@1.0.6",
+      "description": "CVE-2021-23343 HIGH: ReDoS in path parsing — causes CPU spike on crafted paths"
+    },
+    {
+      "type": "library", "name": "node-fetch", "version": "2.6.0",
+      "purl": "pkg:npm/node-fetch@2.6.0",
+      "description": "CVE-2022-0235 HIGH: Sensitive info leakage — Authorization header forwarded on redirect"
+    },
+    {
+      "type": "library", "name": "xmldom", "version": "0.1.31",
+      "purl": "pkg:npm/xmldom@0.1.31",
+      "description": "CVE-2021-32796 HIGH: XXE and XML injection in DOM parser"
+    },
+    {
+      "type": "library", "name": "set-value", "version": "3.0.1",
+      "purl": "pkg:npm/set-value@3.0.1",
+      "description": "CVE-2021-23440 HIGH: Prototype Pollution via deeply nested keys"
+    },
+    {
+      "type": "library", "name": "merge", "version": "1.2.1",
+      "purl": "pkg:npm/merge@1.2.1",
+      "description": "CVE-2020-28499 HIGH: Prototype Pollution via recursive merge"
+    },
+    {
+      "type": "library", "name": "jsonwebtoken", "version": "8.5.1",
+      "purl": "pkg:npm/jsonwebtoken@8.5.1",
+      "description": "CVE-2022-23529 HIGH: RCE if secret is object + algorithm confusion attack possible"
+    },
+    {
+      "type": "library", "name": "object-path", "version": "0.11.4",
+      "purl": "pkg:npm/object-path@0.11.4",
+      "description": "CVE-2021-23434 HIGH: Prototype Pollution via path with __proto__ segment"
+    },
+
+    {
+      "type": "library", "name": "marked", "version": "1.2.9",
+      "purl": "pkg:npm/marked@1.2.9",
+      "description": "CVE-2022-21681 MEDIUM: ReDoS via crafted markdown — CPU exhaustion"
+    },
+    {
+      "type": "library", "name": "node-forge", "version": "0.10.0",
+      "purl": "pkg:npm/node-forge@0.10.0",
+      "description": "CVE-2022-0122 MEDIUM: Open redirect vulnerability in URL processing"
+    },
+    {
+      "type": "library", "name": "ansi-regex", "version": "3.0.0",
+      "purl": "pkg:npm/ansi-regex@3.0.0",
+      "description": "CVE-2021-3807 MEDIUM: ReDoS — crafted ANSI string causes catastrophic backtracking"
+    },
+    {
+      "type": "library", "name": "glob-parent", "version": "5.1.1",
+      "purl": "pkg:npm/glob-parent@5.1.1",
+      "description": "CVE-2020-28469 MEDIUM: ReDoS in glob-parent parsing"
+    },
+    {
+      "type": "library", "name": "ws", "version": "7.4.5",
+      "purl": "pkg:npm/ws@7.4.5",
+      "description": "CVE-2021-32640 MEDIUM: ReDoS via Sec-Websocket-Protocol header"
+    },
+    {
+      "type": "library", "name": "browserslist", "version": "4.16.3",
+      "purl": "pkg:npm/browserslist@4.16.3",
+      "description": "CVE-2021-23364 MEDIUM: ReDoS via crafted query string"
+    },
+    {
+      "type": "library", "name": "dot-prop", "version": "4.2.0",
+      "purl": "pkg:npm/dot-prop@4.2.0",
+      "description": "CVE-2020-8116 MEDIUM: Prototype Pollution via dot notation key access"
+    },
+    {
+      "type": "library", "name": "ini", "version": "1.3.5",
+      "purl": "pkg:npm/ini@1.3.5",
+      "description": "CVE-2020-7788 MEDIUM: Prototype Pollution in INI config parsing"
+    },
+    {
+      "type": "library", "name": "multer", "version": "1.4.2",
+      "purl": "pkg:npm/multer@1.4.2",
+      "description": "CVE-2022-24434 MEDIUM: Denial of Service via malformed multipart/form-data"
+    },
+    {
+      "type": "library", "name": "normalize-url", "version": "4.5.0",
+      "purl": "pkg:npm/normalize-url@4.5.0",
+      "description": "CVE-2021-33502 MEDIUM: ReDoS via crafted URL string"
+    },
+    {
+      "type": "library", "name": "validator", "version": "10.11.0",
+      "purl": "pkg:npm/validator@10.11.0",
+      "description": "CVE-2021-3765 MEDIUM: ReDoS in isEmail() validation function"
+    },
+    {
+      "type": "library", "name": "postcss", "version": "7.0.35",
+      "purl": "pkg:npm/postcss@7.0.35",
+      "description": "CVE-2021-23382 MEDIUM: ReDoS in PostCSS parsing"
+    },
+    {
+      "type": "library", "name": "shell-quote", "version": "1.7.2",
+      "purl": "pkg:npm/shell-quote@1.7.2",
+      "description": "CVE-2021-42740 MEDIUM: Injection via specially crafted environment variable names"
+    },
+    {
+      "type": "library", "name": "netmask", "version": "1.0.6",
+      "purl": "pkg:npm/netmask@1.0.6",
+      "description": "CVE-2021-28918 MEDIUM: Improper input validation allows SSRF bypass via octal IPs"
+    },
+
+    {
+      "type": "library", "name": "debug", "version": "2.6.8",
+      "purl": "pkg:npm/debug@2.6.8",
+      "description": "CVE-2017-16137 LOW: ReDoS via specially crafted debug string"
+    },
+    {
+      "type": "library", "name": "tough-cookie", "version": "2.5.0",
+      "purl": "pkg:npm/tough-cookie@2.5.0",
+      "description": "CVE-2023-26136 LOW: Prototype Pollution in cookie parsing"
+    },
+    {
+      "type": "library", "name": "semver", "version": "5.7.1",
+      "purl": "pkg:npm/semver@5.7.1",
+      "description": "CVE-2022-25883 LOW: ReDoS in version range parsing"
+    },
+    {
+      "type": "library", "name": "nth-check", "version": "1.0.2",
+      "purl": "pkg:npm/nth-check@1.0.2",
+      "description": "CVE-2021-3803 LOW: ReDoS — inefficient regex on nth-check CSS parsing"
+    },
+    {
+      "type": "library", "name": "follow-redirects", "version": "1.14.7",
+      "purl": "pkg:npm/follow-redirects@1.14.7",
+      "description": "CVE-2022-0536 LOW: Sensitive info exposure via Authorization header on cross-host redirect"
+    },
+    {
+      "type": "library", "name": "express", "version": "4.17.1",
+      "purl": "pkg:npm/express@4.17.1",
+      "description": "CVE-2024-29041 LOW: Open redirect via malformed URLs in Express"
+    },
+    {
+      "type": "library", "name": "is-svg", "version": "4.2.1",
+      "purl": "pkg:npm/is-svg@4.2.1",
+      "description": "CVE-2021-29059 HIGH: ReDoS via crafted SVG string — CVSS 7.5"
+    }
+  ]
+}

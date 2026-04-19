@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.demo</groupId>
+    <artifactId>vulnerable-sca-demo</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Vulnerable SCA Demo App</name>
+    <description>Intentionally vulnerable Java app for Dependency-Track SCA demo</description>
+
+    <dependencies>
+
+        <!-- ================================================ -->
+        <!-- CRITICAL SEVERITY                                 -->
+        <!-- ================================================ -->
+
+        <!-- CVE-2021-44228 / CVE-2021-45046 - Log4Shell (RCE) - CVSS 10.0 -->
+        <!-- Most famous Java CVE ever - JNDI injection via log messages -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.1</version>
+        </dependency>
+
+        <!-- CVE-2017-5638 - Apache Struts (RCE) - CVSS 10.0 -->
+        <!-- Equifax breach vulnerability -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.3.31</version>
+        </dependency>
+
+        <!-- CVE-2022-22965 - Spring4Shell (RCE) - CVSS 9.8 -->
+        <!-- Data binding RCE in Spring Framework -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.3.17</version>
+        </dependency>
+
+        <!-- CVE-2019-17571 - Log4j 1.x (RCE via deserialization) - CVSS 9.8 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <!-- CVE-2015-7501 - Apache Commons Collections (RCE) - CVSS 9.8 -->
+        <!-- Java deserialization gadget chain -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+
+        <!-- CVE-2022-42003 / CVE-2022-42004 - Jackson RCE - CVSS 9.8 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.9</version>
+        </dependency>
+
+        <!-- CVE-2020-9547 - Jackson Polymorphic Deserialization RCE - CVSS 9.8 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.9</version>
+        </dependency>
+
+        <!-- ================================================ -->
+        <!-- HIGH SEVERITY                                     -->
+        <!-- ================================================ -->
+
+        <!-- CVE-2021-26291 - Maven dependency confusion - CVSS 9.1 -->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-core</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+
+        <!-- CVE-2022-25168 - Apache Commons Text RCE (Text4Shell) - CVSS 9.8 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.9</version>
+        </dependency>
+
+        <!-- CVE-2022-22950 - Spring Expression DoS - CVSS 7.5 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>5.3.15</version>
+        </dependency>
+
+        <!-- CVE-2021-22044 - Feign Client SSRF - CVSS 7.5 -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>11.0</version>
+        </dependency>
+
+        <!-- CVE-2020-13920 - Apache ActiveMQ RCE - CVSS 7.5 -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-broker</artifactId>
+            <version>5.15.12</version>
+        </dependency>
+
+        <!-- CVE-2021-22112 - Spring Security Auth Bypass - CVSS 8.8 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.4.3</version>
+        </dependency>
+
+        <!-- CVE-2019-14900 - Hibernate SQL Injection - CVSS 7.5 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.12.Final</version>
+        </dependency>
+
+        <!-- CVE-2021-40690 - Apache XML Security (MITM) - CVSS 7.5 -->
+        <dependency>
+            <groupId>org.apache.santuario</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+
+        <!-- ================================================ -->
+        <!-- MEDIUM SEVERITY                                   -->
+        <!-- ================================================ -->
+
+        <!-- CVE-2021-28170 - Jakarta Expression Language injection - CVSS 5.3 -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.el</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
+        <!-- CVE-2022-22976 - Spring Security BCrypt timing attack - CVSS 5.3 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>5.5.2</version>
+        </dependency>
+
+        <!-- CVE-2021-22573 - Google OAuth info disclosure - CVSS 6.8 -->
+        <dependency>
+            <groupId>com.google.oauth-client</groupId>
+            <artifactId>google-oauth-client</artifactId>
+            <version>1.31.4</version>
+        </dependency>
+
+        <!-- CVE-2021-4104 - Log4j 1.x JMSAppender RCE - CVSS 6.6 -->
+        <!-- (requires specific config) -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+
+        <!-- CVE-2022-41854 - SnakeYAML deserialization - CVSS 6.5 -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.30</version>
+        </dependency>
+
+        <!-- CVE-2020-11979 - Apache Ant path traversal - CVSS 6.5 -->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.10.9</version>
+        </dependency>
+
+        <!-- CVE-2021-43797 - Netty HTTP smuggling - CVSS 6.5 -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-codec-http</artifactId>
+            <version>4.1.68.Final</version>
+        </dependency>
+
+        <!-- ================================================ -->
+        <!-- LOW SEVERITY                                      -->
+        <!-- ================================================ -->
+
+        <!-- CVE-2020-15522 - Bouncy Castle timing issue - CVSS 5.9 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.66</version>
+        </dependency>
+
+        <!-- CVE-2022-24823 - Netty temp file info disclosure - CVSS 3.3 -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-handler</artifactId>
+            <version>4.1.75.Final</version>
+        </dependency>
+
+        <!-- CVE-2021-37714 - jsoup ReDoS - CVSS 5.3 -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+
+        <!-- CVE-2020-13692 - PostgreSQL JDBC XML injection - CVSS 7.7 -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.18</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- CycloneDX SBOM generation plugin -->
+            <plugin>
+                <groupId>org.cyclonedx</groupId>
+                <artifactId>cyclonedx-maven-plugin</artifactId>
+                <version>2.7.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>makeAggregateBom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <projectType>library</projectType>
+                    <schemaVersion>1.4</schemaVersion>
+                    <includeBomSerialNumber>true</includeBomSerialNumber>
+                    <includeCompileScope>true</includeCompileScope>
+                    <includeRuntimeScope>true</includeRuntimeScope>
+                    <includeTestScope>false</includeTestScope>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
